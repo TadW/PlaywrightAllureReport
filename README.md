@@ -8,7 +8,7 @@
  npx playwright test  ./tests/register.spec.ts
  ```
 
-* Skip the test register.spec.ts from tests folder tests
+* Skip the test register.spec.ts from tests folder 
 
 <img src=screenshots/registerTestSkip.png>
 
