@@ -27,13 +27,7 @@ test.describe(
       const postalCode = computersData.postalCode;
       const phoneNumber = computersData.phoneNumber;
 
-      await computersPage.orderComputer(
-      
-        city,
-        address,
-        postalCode,
-        phoneNumber,
-      );
+      await computersPage.orderComputer(city, address, postalCode, phoneNumber);
 
       await expect(computersPage.orderSuccessfully).toHaveText(
         computersData.orderSuccessfullyMessage,
