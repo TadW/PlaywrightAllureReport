@@ -1,0 +1,23 @@
+{
+  "name": "playwrighttypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npm run test -- --headed",
+    "testRegister": "npm run test ./tests/register.spec.ts",
+    "testLogin": "npm run test ./tests/login.spec.ts",
+    "testComputers": "npm run test ./tests/computers.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.8",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^2.15.1",
+    "prettier": "3.2.5"
+  }
+}
