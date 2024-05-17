@@ -32,7 +32,6 @@ export class ComputersPage {
   ): Promise<void> {
     await this.selectCpu.check();
     await this.selectMemory.check();
-    await this.page.waitForTimeout(2000);
     await this.addTocart.click();
     await this.closeInfoCart.click();
     await this.gotoShoppingCart.click();
@@ -44,6 +43,10 @@ export class ComputersPage {
     await this.fillAddress.fill(address);
     await this.fillPostalCode.fill(postalCode);
     await this.fillPhoneNumber.fill(phoneNumber);
+    this.gotoConfirmPage();
+  }
+
+  async gotoConfirmPage(): Promise<void> {
     await this.continueClick.click();
     await this.page.waitForTimeout(2000);
     await this.continueClick.click();
@@ -54,5 +57,6 @@ export class ComputersPage {
     await this.page.waitForTimeout(2000);
     await this.confirmClick.click();
     await this.page.waitForTimeout(2000);
+
   }
 }
